@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Astat`s Website{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Contact</h1>
+    <form method="post">
+        {%csrf_token%}
+        <div class="contact-form">
+            {{ form.name }}<br>
+            {{ form.phone }}<br>
+            {{ form.email }}<br>
+        </div>
+        <span>{{error}}</span>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
